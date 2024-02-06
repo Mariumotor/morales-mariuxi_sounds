@@ -6,7 +6,8 @@ let freq, amp;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  osc = new p5.Oscillator('sine');
+ // osc = new p5.Oscillator('sine');
+  osc = new p5.Oscillator('triangle')
   osc.amp(0.5);
   osc.start();
   background(0); // Fondo negro
