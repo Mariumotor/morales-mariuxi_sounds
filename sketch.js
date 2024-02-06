@@ -26,14 +26,14 @@ function draw() {
     osc.amp(0, 0.1);
   }
 
-  let x1 = width * noise(t + 15);
-  let x2 = width * noise(t + 25);
-  let x3 = width * noise(t + 35);
-  let x4 = width * noise(t + 45);
-  let y1 = height * noise(t + 55);
-  let y2 = height * noise(t + 65);
-  let y3 = height * noise(t + 75);
-  let y4 = height * noise(t + 85);
+  let x1 = width * noise(t + 0);
+  let x2 = width * noise(t + 15);
+  let x3 = width * noise(t + 25);
+  let x4 = width * noise(t + 35);
+  let y1 = height * noise(t + 45);
+  let y2 = height * noise(t + 55);
+  let y3 = height * noise(t + 65);
+  let y4 = height * noise(t + 75);
 
   bezier(x1, y1, x2, y2, x3, y3, x4, y4);
 
