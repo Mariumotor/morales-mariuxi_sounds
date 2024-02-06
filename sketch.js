@@ -2,6 +2,7 @@ let t;
 let osc;
 let playing = true;
 let freq, amp;
+osc = new p5.Oscillator('triangle')
 // sonido al deslizar el cursor
 
 function setup() {
