@@ -1,18 +1,14 @@
 let t;
 let osc;
-let playing = true;
+let playing = false;
 let freq, amp;
-osc = new p5.Oscillator('triangle')
-// sonido al deslizar el cursor
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
- // osc = new p5.Oscillator('sine');
-  osc = new p5.Oscillator('triangle')
-  osc.amp(0.5);
-  osc.start();
-  background(0); // Fondo negro
-  stroke(255, 0, 255); // Color fucsia
+  osc = new p5.Oscillator('sine');
+  osc.amp(0);
+  background(0);
+  stroke(255, 0, 255);
   noFill();
   t = 0;
 }
@@ -40,12 +36,19 @@ function draw() {
   bezier(x1, y1, x2, y2, x3, y3, x4, y4);
 
   t += 0.005;
-  
 }
 
 function mousePressed() {
-  playing = !playing;
   if (!playing) {
+    // Iniciar el audio en respuesta al interactuar con la ventana, para evitar errores posbles con seguridad del navegador
+    userStartAudio();
+    
+    // Iniciar el oscilador
+    osc.start();
+    
+    playing = true;
+  } else {
+    playing = false;
     osc.amp(0, 0.1);
   }
 }
