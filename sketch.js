@@ -7,7 +7,7 @@ let freq, amp;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   osc = new p5.Oscillator('sine');
-  osc.amp(0);
+  osc.amp(0.5);
   osc.start();
   background(0); // Fondo negro
   stroke(255, 0, 255); // Color fucsia
