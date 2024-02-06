@@ -40,7 +40,7 @@ function draw() {
 
 function mousePressed() {
   if (!playing) {
-    // Iniciar el audio en respuesta al interactuar con la ventana, para evitar errores posbles con seguridad del navegador
+    // Iniciar el audio en respuesta al interactuar con la ventana, para evitar errores posibles con seguridad del navegador
     userStartAudio();
     
     // Iniciar el oscilador
