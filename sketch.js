@@ -1,6 +1,6 @@
 let t;
 let osc;
-let playing = false;
+let playing = true;
 let freq, amp;
 // sonido al deslizar el cursor
 
