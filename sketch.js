@@ -2,6 +2,7 @@ let t;
 let osc;
 let playing = false;
 let freq, amp;
+// sonido al deslizar el cursor
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
